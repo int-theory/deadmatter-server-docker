@@ -5,7 +5,9 @@ ARG STEAM_LOGIN=anonymous
 
 RUN ./steamcmd.sh \
     +login ${STEAM_LOGIN} \
-    +force_install_dir /home/steam/deadmatter-dedicated +app_update 1110990 +quit
+    +force_install_dir /home/steam/deadmatter-dedicated \
+    +app_update 1110990 \
+    +quit
 
 # copy the downloaded server files into final image based on ubuntu
 FROM docker.io/ubuntu
